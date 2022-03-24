@@ -50,6 +50,7 @@ public final class MutationProto {
     java.lang.String[] descriptorData = {
       "\n google/spanner/v1/mutation.proto\022\021goog"
           + "le.spanner.v1\032\034google/api/annotations.pr"
+<<<<<<< HEAD
           + "oto\032\037google/api/field_behavior.proto\032\034go"
           + "ogle/protobuf/struct.proto\032\034google/spann"
           + "er/v1/keys.proto\"\325\003\n\010Mutation\0223\n\006insert\030"
@@ -69,13 +70,36 @@ public final class MutationProto {
           + "googleapis/spanner/v1;spanner\252\002\027Google.C"
           + "loud.Spanner.V1\312\002\027Google\\Cloud\\Spanner\\V"
           + "1\352\002\032Google::Cloud::Spanner::V1b\006proto3"
+=======
+          + "oto\032\034google/protobuf/struct.proto\032\034googl"
+          + "e/spanner/v1/keys.proto\"\306\003\n\010Mutation\0223\n\006"
+          + "insert\030\001 \001(\0132!.google.spanner.v1.Mutatio"
+          + "n.WriteH\000\0223\n\006update\030\002 \001(\0132!.google.spann"
+          + "er.v1.Mutation.WriteH\000\022=\n\020insert_or_upda"
+          + "te\030\003 \001(\0132!.google.spanner.v1.Mutation.Wr"
+          + "iteH\000\0224\n\007replace\030\004 \001(\0132!.google.spanner."
+          + "v1.Mutation.WriteH\000\0224\n\006delete\030\005 \001(\0132\".go"
+          + "ogle.spanner.v1.Mutation.DeleteH\000\032S\n\005Wri"
+          + "te\022\r\n\005table\030\001 \001(\t\022\017\n\007columns\030\002 \003(\t\022*\n\006va"
+          + "lues\030\003 \003(\0132\032.google.protobuf.ListValue\032C"
+          + "\n\006Delete\022\r\n\005table\030\001 \001(\t\022*\n\007key_set\030\002 \001(\013"
+          + "2\031.google.spanner.v1.KeySetB\013\n\toperation"
+          + "B\263\001\n\025com.google.spanner.v1B\rMutationProt"
+          + "oP\001Z8google.golang.org/genproto/googleap"
+          + "is/spanner/v1;spanner\252\002\027Google.Cloud.Spa"
+          + "nner.V1\312\002\027Google\\Cloud\\Spanner\\V1\352\002\032Goog"
+          + "le::Cloud::Spanner::V1b\006proto3"
+>>>>>>> parent of 57036286 (feat: copy backup)
     };
     descriptor =
         com.google.protobuf.Descriptors.FileDescriptor.internalBuildGeneratedFileFrom(
             descriptorData,
             new com.google.protobuf.Descriptors.FileDescriptor[] {
               com.google.api.AnnotationsProto.getDescriptor(),
+<<<<<<< HEAD
               com.google.api.FieldBehaviorProto.getDescriptor(),
+=======
+>>>>>>> parent of 57036286 (feat: copy backup)
               com.google.protobuf.StructProto.getDescriptor(),
               com.google.spanner.v1.KeysProto.getDescriptor(),
             });
@@ -103,6 +127,7 @@ public final class MutationProto {
             new java.lang.String[] {
               "Table", "KeySet",
             });
+<<<<<<< HEAD
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
@@ -110,6 +135,9 @@ public final class MutationProto {
         descriptor, registry);
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.FieldBehaviorProto.getDescriptor();
+=======
+    com.google.api.AnnotationsProto.getDescriptor();
+>>>>>>> parent of 57036286 (feat: copy backup)
     com.google.protobuf.StructProto.getDescriptor();
     com.google.spanner.v1.KeysProto.getDescriptor();
   }

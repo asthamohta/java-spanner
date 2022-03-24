@@ -10,9 +10,6 @@
         "grpc": {
           "libraryClient": "DatabaseAdminClient",
           "rpcs": {
-            "CopyBackup": {
-              "methods": ["copyBackupAsync", "copyBackupAsync", "copyBackupAsync", "copyBackupAsync", "copyBackupAsync", "copyBackupOperationCallable", "copyBackupCallable"]
-            },
             "CreateBackup": {
               "methods": ["createBackupAsync", "createBackupAsync", "createBackupAsync", "createBackupOperationCallable", "createBackupCallable"]
             },

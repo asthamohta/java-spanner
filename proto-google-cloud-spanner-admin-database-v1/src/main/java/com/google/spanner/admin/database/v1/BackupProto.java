@@ -40,14 +40,6 @@ public final class BackupProto {
   static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_google_spanner_admin_database_v1_CreateBackupMetadata_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-      internal_static_google_spanner_admin_database_v1_CopyBackupRequest_descriptor;
-  static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_google_spanner_admin_database_v1_CopyBackupRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-      internal_static_google_spanner_admin_database_v1_CopyBackupMetadata_descriptor;
-  static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_google_spanner_admin_database_v1_CopyBackupMetadata_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
       internal_static_google_spanner_admin_database_v1_UpdateBackupRequest_descriptor;
   static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_google_spanner_admin_database_v1_UpdateBackupRequest_fieldAccessorTable;
@@ -83,10 +75,6 @@ public final class BackupProto {
       internal_static_google_spanner_admin_database_v1_CreateBackupEncryptionConfig_descriptor;
   static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_google_spanner_admin_database_v1_CreateBackupEncryptionConfig_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-      internal_static_google_spanner_admin_database_v1_CopyBackupEncryptionConfig_descriptor;
-  static final com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_google_spanner_admin_database_v1_CopyBackupEncryptionConfig_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor getDescriptor() {
     return descriptor;
@@ -250,24 +238,8 @@ public final class BackupProto {
             new java.lang.String[] {
               "Name", "Database", "Progress", "CancelTime",
             });
-    internal_static_google_spanner_admin_database_v1_CopyBackupRequest_descriptor =
-        getDescriptor().getMessageTypes().get(3);
-    internal_static_google_spanner_admin_database_v1_CopyBackupRequest_fieldAccessorTable =
-        new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-            internal_static_google_spanner_admin_database_v1_CopyBackupRequest_descriptor,
-            new java.lang.String[] {
-              "Parent", "BackupId", "SourceBackup", "ExpireTime", "EncryptionConfig",
-            });
-    internal_static_google_spanner_admin_database_v1_CopyBackupMetadata_descriptor =
-        getDescriptor().getMessageTypes().get(4);
-    internal_static_google_spanner_admin_database_v1_CopyBackupMetadata_fieldAccessorTable =
-        new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-            internal_static_google_spanner_admin_database_v1_CopyBackupMetadata_descriptor,
-            new java.lang.String[] {
-              "Name", "SourceBackup", "Progress", "CancelTime",
-            });
     internal_static_google_spanner_admin_database_v1_UpdateBackupRequest_descriptor =
-        getDescriptor().getMessageTypes().get(5);
+        getDescriptor().getMessageTypes().get(3);
     internal_static_google_spanner_admin_database_v1_UpdateBackupRequest_fieldAccessorTable =
         new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
             internal_static_google_spanner_admin_database_v1_UpdateBackupRequest_descriptor,
@@ -275,7 +247,7 @@ public final class BackupProto {
               "Backup", "UpdateMask",
             });
     internal_static_google_spanner_admin_database_v1_GetBackupRequest_descriptor =
-        getDescriptor().getMessageTypes().get(6);
+        getDescriptor().getMessageTypes().get(4);
     internal_static_google_spanner_admin_database_v1_GetBackupRequest_fieldAccessorTable =
         new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
             internal_static_google_spanner_admin_database_v1_GetBackupRequest_descriptor,
@@ -283,7 +255,7 @@ public final class BackupProto {
               "Name",
             });
     internal_static_google_spanner_admin_database_v1_DeleteBackupRequest_descriptor =
-        getDescriptor().getMessageTypes().get(7);
+        getDescriptor().getMessageTypes().get(5);
     internal_static_google_spanner_admin_database_v1_DeleteBackupRequest_fieldAccessorTable =
         new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
             internal_static_google_spanner_admin_database_v1_DeleteBackupRequest_descriptor,
@@ -291,7 +263,7 @@ public final class BackupProto {
               "Name",
             });
     internal_static_google_spanner_admin_database_v1_ListBackupsRequest_descriptor =
-        getDescriptor().getMessageTypes().get(8);
+        getDescriptor().getMessageTypes().get(6);
     internal_static_google_spanner_admin_database_v1_ListBackupsRequest_fieldAccessorTable =
         new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
             internal_static_google_spanner_admin_database_v1_ListBackupsRequest_descriptor,
@@ -299,7 +271,7 @@ public final class BackupProto {
               "Parent", "Filter", "PageSize", "PageToken",
             });
     internal_static_google_spanner_admin_database_v1_ListBackupsResponse_descriptor =
-        getDescriptor().getMessageTypes().get(9);
+        getDescriptor().getMessageTypes().get(7);
     internal_static_google_spanner_admin_database_v1_ListBackupsResponse_fieldAccessorTable =
         new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
             internal_static_google_spanner_admin_database_v1_ListBackupsResponse_descriptor,
@@ -307,7 +279,7 @@ public final class BackupProto {
               "Backups", "NextPageToken",
             });
     internal_static_google_spanner_admin_database_v1_ListBackupOperationsRequest_descriptor =
-        getDescriptor().getMessageTypes().get(10);
+        getDescriptor().getMessageTypes().get(8);
     internal_static_google_spanner_admin_database_v1_ListBackupOperationsRequest_fieldAccessorTable =
         new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
             internal_static_google_spanner_admin_database_v1_ListBackupOperationsRequest_descriptor,
@@ -315,7 +287,7 @@ public final class BackupProto {
               "Parent", "Filter", "PageSize", "PageToken",
             });
     internal_static_google_spanner_admin_database_v1_ListBackupOperationsResponse_descriptor =
-        getDescriptor().getMessageTypes().get(11);
+        getDescriptor().getMessageTypes().get(9);
     internal_static_google_spanner_admin_database_v1_ListBackupOperationsResponse_fieldAccessorTable =
         new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
             internal_static_google_spanner_admin_database_v1_ListBackupOperationsResponse_descriptor,
@@ -323,7 +295,7 @@ public final class BackupProto {
               "Operations", "NextPageToken",
             });
     internal_static_google_spanner_admin_database_v1_BackupInfo_descriptor =
-        getDescriptor().getMessageTypes().get(12);
+        getDescriptor().getMessageTypes().get(10);
     internal_static_google_spanner_admin_database_v1_BackupInfo_fieldAccessorTable =
         new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
             internal_static_google_spanner_admin_database_v1_BackupInfo_descriptor,
@@ -331,18 +303,10 @@ public final class BackupProto {
               "Backup", "VersionTime", "CreateTime", "SourceDatabase",
             });
     internal_static_google_spanner_admin_database_v1_CreateBackupEncryptionConfig_descriptor =
-        getDescriptor().getMessageTypes().get(13);
+        getDescriptor().getMessageTypes().get(11);
     internal_static_google_spanner_admin_database_v1_CreateBackupEncryptionConfig_fieldAccessorTable =
         new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
             internal_static_google_spanner_admin_database_v1_CreateBackupEncryptionConfig_descriptor,
-            new java.lang.String[] {
-              "EncryptionType", "KmsKeyName",
-            });
-    internal_static_google_spanner_admin_database_v1_CopyBackupEncryptionConfig_descriptor =
-        getDescriptor().getMessageTypes().get(14);
-    internal_static_google_spanner_admin_database_v1_CopyBackupEncryptionConfig_fieldAccessorTable =
-        new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-            internal_static_google_spanner_admin_database_v1_CopyBackupEncryptionConfig_descriptor,
             new java.lang.String[] {
               "EncryptionType", "KmsKeyName",
             });

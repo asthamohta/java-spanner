@@ -310,6 +310,7 @@ public final class SpannerProto {
           + ".ExecuteBatchDmlRequest\032*.google.spanner"
           + ".v1.ExecuteBatchDmlResponse\"V\202\323\344\223\002P\"K/v1"
           + "/{session=projects/*/instances/*/databas"
+<<<<<<< HEAD
           + "es/*/sessions/*}:executeBatchDml:\001*\022\221\001\n\004"
           + "Read\022\036.google.spanner.v1.ReadRequest\032\034.g"
           + "oogle.spanner.v1.ResultSet\"K\202\323\344\223\002E\"@/v1/"
@@ -354,6 +355,24 @@ public final class SpannerProto {
           + "panner::V1\352A_\n\037spanner.googleapis.com/Da"
           + "tabase\022<projects/{project}/instances/{in"
           + "stance}/databases/{database}P\010b\006proto3"
+=======
+          + "es/*/sessions/*}:partitionQuery:\001*\022\264\001\n\rP"
+          + "artitionRead\022\'.google.spanner.v1.Partiti"
+          + "onReadRequest\032$.google.spanner.v1.Partit"
+          + "ionResponse\"T\202\323\344\223\002N\"I/v1/{session=projec"
+          + "ts/*/instances/*/databases/*/sessions/*}"
+          + ":partitionRead:\001*\032w\312A\026spanner.googleapis"
+          + ".com\322A[https://www.googleapis.com/auth/c"
+          + "loud-platform,https://www.googleapis.com"
+          + "/auth/spanner.dataB\224\002\n\025com.google.spanne"
+          + "r.v1B\014SpannerProtoP\001Z8google.golang.org/"
+          + "genproto/googleapis/spanner/v1;spanner\252\002"
+          + "\027Google.Cloud.Spanner.V1\312\002\027Google\\Cloud\\"
+          + "Spanner\\V1\352\002\032Google::Cloud::Spanner::V1\352"
+          + "A_\n\037spanner.googleapis.com/Database\022<pro"
+          + "jects/{project}/instances/{instance}/dat"
+          + "abases/{database}P\010b\006proto3"
+>>>>>>> parent of 57036286 (feat: copy backup)
     };
     descriptor =
         com.google.protobuf.Descriptors.FileDescriptor.internalBuildGeneratedFileFrom(
