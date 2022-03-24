@@ -42,7 +42,6 @@ public final class Backup extends com.google.protobuf.GeneratedMessageV3
     name_ = "";
     state_ = 0;
     referencingDatabases_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-    databaseDialect_ = 0;
     referencingBackups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
   }
 
@@ -172,13 +171,6 @@ public final class Backup extends com.google.protobuf.GeneratedMessageV3
                 versionTime_ = subBuilder.buildPartial();
               }
 
-              break;
-            }
-          case 80:
-            {
-              int rawValue = input.readEnum();
-
-              databaseDialect_ = rawValue;
               break;
             }
           case 90:
@@ -886,48 +878,6 @@ public final class Backup extends com.google.protobuf.GeneratedMessageV3
     return getEncryptionInfo();
   }
 
-  public static final int DATABASE_DIALECT_FIELD_NUMBER = 10;
-  private int databaseDialect_;
-  /**
-   *
-   *
-   * <pre>
-   * Output only. The database dialect information for the backup.
-   * </pre>
-   *
-   * <code>
-   * .google.spanner.admin.database.v1.DatabaseDialect database_dialect = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];
-   * </code>
-   *
-   * @return The enum numeric value on the wire for databaseDialect.
-   */
-  @java.lang.Override
-  public int getDatabaseDialectValue() {
-    return databaseDialect_;
-  }
-  /**
-   *
-   *
-   * <pre>
-   * Output only. The database dialect information for the backup.
-   * </pre>
-   *
-   * <code>
-   * .google.spanner.admin.database.v1.DatabaseDialect database_dialect = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];
-   * </code>
-   *
-   * @return The databaseDialect.
-   */
-  @java.lang.Override
-  public com.google.spanner.admin.database.v1.DatabaseDialect getDatabaseDialect() {
-    @SuppressWarnings("deprecation")
-    com.google.spanner.admin.database.v1.DatabaseDialect result =
-        com.google.spanner.admin.database.v1.DatabaseDialect.valueOf(databaseDialect_);
-    return result == null
-        ? com.google.spanner.admin.database.v1.DatabaseDialect.UNRECOGNIZED
-        : result;
-  }
-
   public static final int REFERENCING_BACKUPS_FIELD_NUMBER = 11;
   private com.google.protobuf.LazyStringList referencingBackups_;
   /**
@@ -984,10 +934,10 @@ public final class Backup extends com.google.protobuf.GeneratedMessageV3
 
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+    if (!getNameBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(database_)) {
+    if (!getDatabaseBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, database_);
     }
     if (expireTime_ != null) {
@@ -1012,11 +962,6 @@ public final class Backup extends com.google.protobuf.GeneratedMessageV3
     if (versionTime_ != null) {
       output.writeMessage(9, getVersionTime());
     }
-    if (databaseDialect_
-        != com.google.spanner.admin.database.v1.DatabaseDialect.DATABASE_DIALECT_UNSPECIFIED
-            .getNumber()) {
-      output.writeEnum(10, databaseDialect_);
-    }
     for (int i = 0; i < referencingBackups_.size(); i++) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 11, referencingBackups_.getRaw(i));
     }
@@ -1032,10 +977,10 @@ public final class Backup extends com.google.protobuf.GeneratedMessageV3
     if (size != -1) return size;
 
     size = 0;
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+    if (!getNameBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(database_)) {
+    if (!getDatabaseBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, database_);
     }
     if (expireTime_ != null) {
@@ -1063,11 +1008,6 @@ public final class Backup extends com.google.protobuf.GeneratedMessageV3
     }
     if (versionTime_ != null) {
       size += com.google.protobuf.CodedOutputStream.computeMessageSize(9, getVersionTime());
-    }
-    if (databaseDialect_
-        != com.google.spanner.admin.database.v1.DatabaseDialect.DATABASE_DIALECT_UNSPECIFIED
-            .getNumber()) {
-      size += com.google.protobuf.CodedOutputStream.computeEnumSize(10, databaseDialect_);
     }
     {
       int dataSize = 0;
@@ -1117,7 +1057,6 @@ public final class Backup extends com.google.protobuf.GeneratedMessageV3
     if (hasEncryptionInfo()) {
       if (!getEncryptionInfo().equals(other.getEncryptionInfo())) return false;
     }
-    if (databaseDialect_ != other.databaseDialect_) return false;
     if (!getReferencingBackupsList().equals(other.getReferencingBackupsList())) return false;
     if (hasMaxExpireTime() != other.hasMaxExpireTime()) return false;
     if (hasMaxExpireTime()) {
@@ -1162,8 +1101,6 @@ public final class Backup extends com.google.protobuf.GeneratedMessageV3
       hash = (37 * hash) + ENCRYPTION_INFO_FIELD_NUMBER;
       hash = (53 * hash) + getEncryptionInfo().hashCode();
     }
-    hash = (37 * hash) + DATABASE_DIALECT_FIELD_NUMBER;
-    hash = (53 * hash) + databaseDialect_;
     if (getReferencingBackupsCount() > 0) {
       hash = (37 * hash) + REFERENCING_BACKUPS_FIELD_NUMBER;
       hash = (53 * hash) + getReferencingBackupsList().hashCode();
@@ -1351,8 +1288,6 @@ public final class Backup extends com.google.protobuf.GeneratedMessageV3
         encryptionInfo_ = null;
         encryptionInfoBuilder_ = null;
       }
-      databaseDialect_ = 0;
-
       referencingBackups_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       bitField0_ = (bitField0_ & ~0x00000002);
       if (maxExpireTimeBuilder_ == null) {
@@ -1418,7 +1353,6 @@ public final class Backup extends com.google.protobuf.GeneratedMessageV3
       } else {
         result.encryptionInfo_ = encryptionInfoBuilder_.build();
       }
-      result.databaseDialect_ = databaseDialect_;
       if (((bitField0_ & 0x00000002) != 0)) {
         referencingBackups_ = referencingBackups_.getUnmodifiableView();
         bitField0_ = (bitField0_ & ~0x00000002);
@@ -1513,9 +1447,6 @@ public final class Backup extends com.google.protobuf.GeneratedMessageV3
       }
       if (other.hasEncryptionInfo()) {
         mergeEncryptionInfo(other.getEncryptionInfo());
-      }
-      if (other.databaseDialect_ != 0) {
-        setDatabaseDialectValue(other.getDatabaseDialectValue());
       }
       if (!other.referencingBackups_.isEmpty()) {
         if (referencingBackups_.isEmpty()) {
@@ -3100,109 +3031,6 @@ public final class Backup extends com.google.protobuf.GeneratedMessageV3
         encryptionInfo_ = null;
       }
       return encryptionInfoBuilder_;
-    }
-
-    private int databaseDialect_ = 0;
-    /**
-     *
-     *
-     * <pre>
-     * Output only. The database dialect information for the backup.
-     * </pre>
-     *
-     * <code>
-     * .google.spanner.admin.database.v1.DatabaseDialect database_dialect = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];
-     * </code>
-     *
-     * @return The enum numeric value on the wire for databaseDialect.
-     */
-    @java.lang.Override
-    public int getDatabaseDialectValue() {
-      return databaseDialect_;
-    }
-    /**
-     *
-     *
-     * <pre>
-     * Output only. The database dialect information for the backup.
-     * </pre>
-     *
-     * <code>
-     * .google.spanner.admin.database.v1.DatabaseDialect database_dialect = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];
-     * </code>
-     *
-     * @param value The enum numeric value on the wire for databaseDialect to set.
-     * @return This builder for chaining.
-     */
-    public Builder setDatabaseDialectValue(int value) {
-
-      databaseDialect_ = value;
-      onChanged();
-      return this;
-    }
-    /**
-     *
-     *
-     * <pre>
-     * Output only. The database dialect information for the backup.
-     * </pre>
-     *
-     * <code>
-     * .google.spanner.admin.database.v1.DatabaseDialect database_dialect = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];
-     * </code>
-     *
-     * @return The databaseDialect.
-     */
-    @java.lang.Override
-    public com.google.spanner.admin.database.v1.DatabaseDialect getDatabaseDialect() {
-      @SuppressWarnings("deprecation")
-      com.google.spanner.admin.database.v1.DatabaseDialect result =
-          com.google.spanner.admin.database.v1.DatabaseDialect.valueOf(databaseDialect_);
-      return result == null
-          ? com.google.spanner.admin.database.v1.DatabaseDialect.UNRECOGNIZED
-          : result;
-    }
-    /**
-     *
-     *
-     * <pre>
-     * Output only. The database dialect information for the backup.
-     * </pre>
-     *
-     * <code>
-     * .google.spanner.admin.database.v1.DatabaseDialect database_dialect = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];
-     * </code>
-     *
-     * @param value The databaseDialect to set.
-     * @return This builder for chaining.
-     */
-    public Builder setDatabaseDialect(com.google.spanner.admin.database.v1.DatabaseDialect value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
-
-      databaseDialect_ = value.getNumber();
-      onChanged();
-      return this;
-    }
-    /**
-     *
-     *
-     * <pre>
-     * Output only. The database dialect information for the backup.
-     * </pre>
-     *
-     * <code>
-     * .google.spanner.admin.database.v1.DatabaseDialect database_dialect = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];
-     * </code>
-     *
-     * @return This builder for chaining.
-     */
-    public Builder clearDatabaseDialect() {
-
-      databaseDialect_ = 0;
-      onChanged();
-      return this;
     }
 
     private com.google.protobuf.LazyStringList referencingBackups_ =

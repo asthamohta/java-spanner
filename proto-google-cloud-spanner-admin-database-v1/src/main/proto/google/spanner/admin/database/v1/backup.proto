@@ -16,7 +16,6 @@ syntax = "proto3";
 
 package google.spanner.admin.database.v1;
 
-import "google/api/annotations.proto";
 import "google/api/field_behavior.proto";
 import "google/api/resource.proto";
 import "google/longrunning/operations.proto";
@@ -120,8 +119,6 @@ message Backup {
 
   // Output only. The database dialect information for the backup.
   DatabaseDialect database_dialect = 10 [(google.api.field_behavior) = OUTPUT_ONLY];
-<<<<<<< HEAD
-
   // Output only. The names of the destination backups being created by copying
   // this source backup. The backup names are of the form
   // `projects/<project>/instances/<instance>/backups/<backup>`.
@@ -142,8 +139,6 @@ message Backup {
   // copying an existing backup, the expiration time specified must be
   // less than `Backup.max_expire_time`.
   google.protobuf.Timestamp max_expire_time = 12 [(google.api.field_behavior) = OUTPUT_ONLY];
-=======
->>>>>>> parent of 57036286 (feat: copy backup)
 }
 
 // The request for [CreateBackup][google.spanner.admin.database.v1.DatabaseAdmin.CreateBackup].

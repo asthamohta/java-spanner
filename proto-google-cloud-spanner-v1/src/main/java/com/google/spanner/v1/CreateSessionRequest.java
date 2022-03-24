@@ -185,10 +185,10 @@ public final class CreateSessionRequest extends com.google.protobuf.GeneratedMes
    *
    *
    * <pre>
-   * Required. The session to create.
+   * The session to create.
    * </pre>
    *
-   * <code>.google.spanner.v1.Session session = 2 [(.google.api.field_behavior) = REQUIRED];</code>
+   * <code>.google.spanner.v1.Session session = 2;</code>
    *
    * @return Whether the session field is set.
    */
@@ -200,10 +200,10 @@ public final class CreateSessionRequest extends com.google.protobuf.GeneratedMes
    *
    *
    * <pre>
-   * Required. The session to create.
+   * The session to create.
    * </pre>
    *
-   * <code>.google.spanner.v1.Session session = 2 [(.google.api.field_behavior) = REQUIRED];</code>
+   * <code>.google.spanner.v1.Session session = 2;</code>
    *
    * @return The session.
    */
@@ -215,10 +215,10 @@ public final class CreateSessionRequest extends com.google.protobuf.GeneratedMes
    *
    *
    * <pre>
-   * Required. The session to create.
+   * The session to create.
    * </pre>
    *
-   * <code>.google.spanner.v1.Session session = 2 [(.google.api.field_behavior) = REQUIRED];</code>
+   * <code>.google.spanner.v1.Session session = 2;</code>
    */
   @java.lang.Override
   public com.google.spanner.v1.SessionOrBuilder getSessionOrBuilder() {
@@ -239,7 +239,7 @@ public final class CreateSessionRequest extends com.google.protobuf.GeneratedMes
 
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(database_)) {
+    if (!getDatabaseBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, database_);
     }
     if (session_ != null) {
@@ -254,7 +254,7 @@ public final class CreateSessionRequest extends com.google.protobuf.GeneratedMes
     if (size != -1) return size;
 
     size = 0;
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(database_)) {
+    if (!getDatabaseBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, database_);
     }
     if (session_ != null) {
@@ -695,11 +695,10 @@ public final class CreateSessionRequest extends com.google.protobuf.GeneratedMes
      *
      *
      * <pre>
-     * Required. The session to create.
+     * The session to create.
      * </pre>
      *
-     * <code>.google.spanner.v1.Session session = 2 [(.google.api.field_behavior) = REQUIRED];
-     * </code>
+     * <code>.google.spanner.v1.Session session = 2;</code>
      *
      * @return Whether the session field is set.
      */
@@ -710,11 +709,10 @@ public final class CreateSessionRequest extends com.google.protobuf.GeneratedMes
      *
      *
      * <pre>
-     * Required. The session to create.
+     * The session to create.
      * </pre>
      *
-     * <code>.google.spanner.v1.Session session = 2 [(.google.api.field_behavior) = REQUIRED];
-     * </code>
+     * <code>.google.spanner.v1.Session session = 2;</code>
      *
      * @return The session.
      */
@@ -729,11 +727,10 @@ public final class CreateSessionRequest extends com.google.protobuf.GeneratedMes
      *
      *
      * <pre>
-     * Required. The session to create.
+     * The session to create.
      * </pre>
      *
-     * <code>.google.spanner.v1.Session session = 2 [(.google.api.field_behavior) = REQUIRED];
-     * </code>
+     * <code>.google.spanner.v1.Session session = 2;</code>
      */
     public Builder setSession(com.google.spanner.v1.Session value) {
       if (sessionBuilder_ == null) {
@@ -752,11 +749,10 @@ public final class CreateSessionRequest extends com.google.protobuf.GeneratedMes
      *
      *
      * <pre>
-     * Required. The session to create.
+     * The session to create.
      * </pre>
      *
-     * <code>.google.spanner.v1.Session session = 2 [(.google.api.field_behavior) = REQUIRED];
-     * </code>
+     * <code>.google.spanner.v1.Session session = 2;</code>
      */
     public Builder setSession(com.google.spanner.v1.Session.Builder builderForValue) {
       if (sessionBuilder_ == null) {
@@ -772,11 +768,10 @@ public final class CreateSessionRequest extends com.google.protobuf.GeneratedMes
      *
      *
      * <pre>
-     * Required. The session to create.
+     * The session to create.
      * </pre>
      *
-     * <code>.google.spanner.v1.Session session = 2 [(.google.api.field_behavior) = REQUIRED];
-     * </code>
+     * <code>.google.spanner.v1.Session session = 2;</code>
      */
     public Builder mergeSession(com.google.spanner.v1.Session value) {
       if (sessionBuilder_ == null) {
@@ -797,11 +792,10 @@ public final class CreateSessionRequest extends com.google.protobuf.GeneratedMes
      *
      *
      * <pre>
-     * Required. The session to create.
+     * The session to create.
      * </pre>
      *
-     * <code>.google.spanner.v1.Session session = 2 [(.google.api.field_behavior) = REQUIRED];
-     * </code>
+     * <code>.google.spanner.v1.Session session = 2;</code>
      */
     public Builder clearSession() {
       if (sessionBuilder_ == null) {
@@ -818,11 +812,10 @@ public final class CreateSessionRequest extends com.google.protobuf.GeneratedMes
      *
      *
      * <pre>
-     * Required. The session to create.
+     * The session to create.
      * </pre>
      *
-     * <code>.google.spanner.v1.Session session = 2 [(.google.api.field_behavior) = REQUIRED];
-     * </code>
+     * <code>.google.spanner.v1.Session session = 2;</code>
      */
     public com.google.spanner.v1.Session.Builder getSessionBuilder() {
 
@@ -833,11 +826,10 @@ public final class CreateSessionRequest extends com.google.protobuf.GeneratedMes
      *
      *
      * <pre>
-     * Required. The session to create.
+     * The session to create.
      * </pre>
      *
-     * <code>.google.spanner.v1.Session session = 2 [(.google.api.field_behavior) = REQUIRED];
-     * </code>
+     * <code>.google.spanner.v1.Session session = 2;</code>
      */
     public com.google.spanner.v1.SessionOrBuilder getSessionOrBuilder() {
       if (sessionBuilder_ != null) {
@@ -850,11 +842,10 @@ public final class CreateSessionRequest extends com.google.protobuf.GeneratedMes
      *
      *
      * <pre>
-     * Required. The session to create.
+     * The session to create.
      * </pre>
      *
-     * <code>.google.spanner.v1.Session session = 2 [(.google.api.field_behavior) = REQUIRED];
-     * </code>
+     * <code>.google.spanner.v1.Session session = 2;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
             com.google.spanner.v1.Session,

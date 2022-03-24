@@ -50,7 +50,6 @@ public final class MutationProto {
     java.lang.String[] descriptorData = {
       "\n google/spanner/v1/mutation.proto\022\021goog"
           + "le.spanner.v1\032\034google/api/annotations.pr"
-<<<<<<< HEAD
           + "oto\032\037google/api/field_behavior.proto\032\034go"
           + "ogle/protobuf/struct.proto\032\034google/spann"
           + "er/v1/keys.proto\"\325\003\n\010Mutation\0223\n\006insert\030"
@@ -70,9 +69,6 @@ public final class MutationProto {
           + "googleapis/spanner/v1;spanner\252\002\027Google.C"
           + "loud.Spanner.V1\312\002\027Google\\Cloud\\Spanner\\V"
           + "1\352\002\032Google::Cloud::Spanner::V1b\006proto3"
-=======
-          + "oto\032\034google/protobuf/struct.proto\032\034googl"
-          + "e/spanner/v1/keys.proto\"\306\003\n\010Mutation\0223\n\006"
           + "insert\030\001 \001(\0132!.google.spanner.v1.Mutatio"
           + "n.WriteH\000\0223\n\006update\030\002 \001(\0132!.google.spann"
           + "er.v1.Mutation.WriteH\000\022=\n\020insert_or_upda"
@@ -89,19 +85,16 @@ public final class MutationProto {
           + "is/spanner/v1;spanner\252\002\027Google.Cloud.Spa"
           + "nner.V1\312\002\027Google\\Cloud\\Spanner\\V1\352\002\032Goog"
           + "le::Cloud::Spanner::V1b\006proto3"
->>>>>>> parent of 57036286 (feat: copy backup)
     };
     descriptor =
         com.google.protobuf.Descriptors.FileDescriptor.internalBuildGeneratedFileFrom(
             descriptorData,
             new com.google.protobuf.Descriptors.FileDescriptor[] {
               com.google.api.AnnotationsProto.getDescriptor(),
-<<<<<<< HEAD
               com.google.api.FieldBehaviorProto.getDescriptor(),
-=======
->>>>>>> parent of 57036286 (feat: copy backup)
               com.google.protobuf.StructProto.getDescriptor(),
               com.google.spanner.v1.KeysProto.getDescriptor(),
+              com.google.api.AnnotationsProto.getDescriptor(),
             });
     internal_static_google_spanner_v1_Mutation_descriptor =
         getDescriptor().getMessageTypes().get(0);
@@ -127,7 +120,6 @@ public final class MutationProto {
             new java.lang.String[] {
               "Table", "KeySet",
             });
-<<<<<<< HEAD
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
@@ -135,11 +127,10 @@ public final class MutationProto {
         descriptor, registry);
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.FieldBehaviorProto.getDescriptor();
-=======
     com.google.api.AnnotationsProto.getDescriptor();
->>>>>>> parent of 57036286 (feat: copy backup)
     com.google.protobuf.StructProto.getDescriptor();
     com.google.spanner.v1.KeysProto.getDescriptor();
+    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)
